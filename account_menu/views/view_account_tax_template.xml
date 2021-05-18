@@ -5,6 +5,15 @@ Copyright (C) 2019 - Today: GRAP (http://www.grap.coop)
 License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 -->
 <odoo>
+    <record id="view_account_tax_template_form" model="ir.ui.view">
+        <field name="model">account.tax.template</field>
+        <field name="inherit_id" ref="account.view_account_tax_template_form" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="chart_template_id" options="{'no_create': True}" />
+            </field>
+        </field>
+    </record>
     <menuitem
         id="menu_account_tax_template"
         action="account.action_account_tax_template_form"
